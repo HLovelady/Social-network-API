@@ -1,1 +1,9 @@
-//  here we setup our DATABASE CONNECTION 
+//setup our connection 
+const { connect, connection } = require('mongoose');
+
+connect('mongodb://localhost/socialNetworkAPI', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+module.exports = connection;
