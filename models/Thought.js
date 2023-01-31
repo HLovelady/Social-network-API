@@ -8,10 +8,18 @@ const thoughtSchema = new Schema(
       default: () => new Types.ObjectId(),
     },
     thoughtText: {
+        type: String, 
+        required: true,
+        minlength: 1, 
+        maxlength: 300,
     },
     createdAt: {
-    },
-    username: {
+        type: Date,
+        default: Date,
+      },
+      username: {
+        type: String, 
+        required: true, 
     },
     reactions: [reactionSchema]
   },
@@ -31,3 +39,5 @@ thoughtSchema.virtual("formattedDate").get(function() {
 
 const Thought = model('thought', thoughtSchema);
 module.exports = Thought;
+
+//virtual needed reactionCount
