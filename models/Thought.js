@@ -13,7 +13,7 @@ const thoughtSchema = new Schema(
     },
     username: {
     },
-    //reaction subdocument
+    reactions: [reactionSchema]
   },
   {
     toJSON: {
