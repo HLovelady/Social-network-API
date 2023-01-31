@@ -30,10 +30,10 @@ const reactionSchema = new Schema(
       }
 );
 
-//add timestamp
+//timestamp
 reactionSchema.virtual("formattedDate").get(function() {
     const date = this.createdAt;
-    return `${date.getDate()}/${date.getMonth();
+    return `${date.getDate()}/${date.getMonth()+ 1}/${date.getFullYear()}`;
   });
 
 
