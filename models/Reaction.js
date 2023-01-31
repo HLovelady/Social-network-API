@@ -31,5 +31,10 @@ const reactionSchema = new Schema(
 );
 
 //add timestamp
+reactionSchema.virtual("formattedDate").get(function() {
+    const date = this.createdAt;
+    return `${date.getDate()}/${date.getMonth();
+  });
+
 
 module.exports = reactionSchema;
