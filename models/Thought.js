@@ -3,6 +3,7 @@ const reactionSchema = require('./Reaction');
 
 const thoughtSchema = new Schema(
 // add thought models
+// add subdocument for reaction.js
 );
 
 thoughtSchema.virtual("formattedDate").get(function() {
