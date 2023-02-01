@@ -36,8 +36,10 @@ thoughtSchema.virtual("formattedDate").get(function() {
     return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
   });
 
+//virtual to count number of reactions
+thoughtSchema.virtual('reactionCount').get(function () {
+  return this.reactions.length
+});
 
 const Thought = model('thought', thoughtSchema);
 module.exports = Thought;
-
-//virtual needed reactionCount
