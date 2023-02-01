@@ -1,6 +1,6 @@
 const connection = require("../config/connection");
-const { User, Thought, Reaction } = require("../models");
-const { userSeeds, thoughtSeeds, reactionSeeds } = require("./data");
+const { User, Thought } = require("../models");
+const { userSeeds, thoughtSeeds } = require("./data");
 
 
 connection.on("error", (err) => err);
@@ -10,7 +10,6 @@ connection.once("open", async () => {
 
   const users = userSeeds;
   const thoughts = thoughtSeeds;
-  const reactions = reactionSeeds;
 
 
   await User.collection.insertMany(users);

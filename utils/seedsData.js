@@ -3,6 +3,22 @@ const userSeeds = [
       username: "",
       email: "",
     },
+    {
+        username: "",
+        email: "",
+    },
+    {
+        username: "",
+        email: "",
+    },
+    {
+        username: "",
+        email: "",
+    },
+    {
+        username: "",
+        email: "",
+    },
   ];
   
 
@@ -11,10 +27,23 @@ const userSeeds = [
       thoughtText: "",
       username: "",
     },
+    {
+        thoughtText: "",
+        username: "",
+    },
+    {
+        thoughtText: "",
+        username: "",
+    },
+    {
+        thoughtText: "",
+        username: "",
+    },
+    {
+        thoughtText: "",
+        username: "",
+    },
   ];
   
-  const reactionSeeds = [
-
-  ];
 
   module.exports = { userSeeds, thoughtSeeds };
