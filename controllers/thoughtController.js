@@ -5,6 +5,7 @@ const { Thought, User } = require("../models");
 module.exports = {
     // GET all thoughts
     getThoughts(req, res) {
+      console.log('hit')
     Thought.find()
       .then((thought) => res.json(thought))
       .catch((err) => res.status(500).json(err));
