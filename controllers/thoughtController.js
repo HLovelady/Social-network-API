@@ -48,13 +48,41 @@ module.exports = {
 
   
     // UPDATE a thought
-
+    updateThought(req, res) {
+        Thought.findOneAndUpdate({ _id: req.params.thoughtId }, { $set: req.body })
+          .then((thought) =>
+            !course
+              ? res.status(404).json({ message: "No Thought found" })
+              : res.json(thought)
+          )
+          .catch((err) => res.status(500).json(err));
+      },
   
     // DELETE a thought
-
+    deleteThought(req, res) {
+        Thought.findOneAndDelete({ _id: req.params.thoughtId })
+          .then((thought) =>
+            !thought
+              ? res.status(404).json({ message: "No Thought found" })
+              : res.json({ message: "Thought deleted" })
+          )
+          .catch((err) => res.status(500).json(err));
+      },
   
     // ADD a reaction to a thought
-
+    createReaction(req, res) {
+        Thought.findOneAndUpdate(
+          { _id: req.params.thoughtId },
+          { $addToSet: { reactions: req.body } },
+          { new: true }
+        )
+          .then((thought) =>
+            !thought
+              ? res.status(404).json({ message: "No Thought found" })
+              : res.json(thought)
+          )
+          .catch((err) => res.status(500).json(err));
+      },
   
     // DELETE a reaction from a thought
       deleteReaction(req, res) {
