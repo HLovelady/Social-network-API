@@ -1,47 +1,47 @@
 const userSeeds = [
     {
-      username: "",
-      email: "",
+      username: "HayleeL1234",
+      email: "haylee@example.com",
     },
     {
-        username: "",
-        email: "",
+        username: "LaurenO1234",
+        email: "Lauren@example.com",
     },
     {
-        username: "",
-        email: "",
+        username: "JackL1234",
+        email: "Jack@example.com",
     },
     {
-        username: "",
-        email: "",
+        username: "EmilyB1234",
+        email: "Emily@example.com",
     },
     {
-        username: "",
-        email: "",
+        username: "StasiaJ1234",
+        email: "Emily@example.com",
     },
   ];
   
 
   const thoughtSeeds = [
     {
-      thoughtText: "",
-      username: "",
+      thoughtText: "I cannot wait to get married in Iceland! It will be one of the more fun and joyous experiences.",
+      username: "HayleeL1234",
     },
     {
-        thoughtText: "",
-        username: "",
+        thoughtText: "Reading might be the greatest joy on earth. You get to experience different lives and worlds.",
+        username: "LaurenO1234",
     },
     {
-        thoughtText: "",
-        username: "",
+        thoughtText: "I really need to travel more. I want to see the 7 wonders of the world.",
+        username: "JackL1234",
     },
     {
-        thoughtText: "",
-        username: "",
+        thoughtText: "Law school has been intense but worth it. I feel fully ready to take on the bad guys.",
+        username: "EmilyB1234",
     },
     {
-        thoughtText: "",
-        username: "",
+        thoughtText: "These kids are driving me nuts. i think I need to get a nanny twice a week while I work.",
+        username: "StasiaJ1234",
     },
   ];
   
