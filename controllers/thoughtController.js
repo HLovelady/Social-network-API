@@ -36,7 +36,15 @@ module.exports = {
           { new: true }
         );
       })
-
+          .then((response) => {
+        if (!response) {
+          res.status(404).json({ message: "ERROR" });
+          return;
+        }
+        res.json(response);
+      })
+      .catch((err) => res.json(err));
+  },
 
   
     // UPDATE a thought
@@ -49,5 +57,17 @@ module.exports = {
 
   
     // DELETE a reaction from a thought
+      deleteReaction(req, res) {
+    Thought.findOneAndDelete(
+      { _id: req.params.thoughtId },
+      { $pull: { reactions: { reactionId: req.body.reactionId } } }
+    )
+      .then((user) =>
+        !user
+          ? res.status(404).json({ message: "No User found" })
+          : res.json(user)
+      )
+      .catch((err) => res.status(500).json(err));
+  },
 };
   
