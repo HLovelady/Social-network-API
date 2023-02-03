@@ -28,14 +28,20 @@ module.exports = {
     createThought(req, res) {
     Thought.create({
       thoughtText: req.body.thoughtText,
-      username: req.body.username,
+      //username: req.body.username,
     })
       .then((dbThoughtData) => {
-        return User.findOneAndUpdate(
-          { _id: req.body.userId },
-          { $push: { thoughts: dbThoughtData._id } },
-          { new: true }
-        );
+        try {
+          const response = User.findOneAndUpdate(
+            { _id: req.body.userId },
+            { $push: { thoughts: dbThoughtData._id } },
+            { new: true }
+          );
+        } catch (error) {
+          console.log("find user error",error)
+        };
+        return response
+      
       })
           .then((response) => {
         if (!response) {
