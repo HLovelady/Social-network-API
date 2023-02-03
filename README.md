@@ -28,6 +28,7 @@ Currently no contributions are being taken.
 
 
 ## Mock-Up
+<img src="assets/images/create.png" />
 ![Social-Network-API](assets/images/get.png)
 
 ![Social-Network-API](assets/images/create.png)
