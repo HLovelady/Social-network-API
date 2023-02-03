@@ -28,9 +28,9 @@ Currently no contributions are being taken.
 
 
 ## Mock-Up
-![Social-Network-API](/assets/images/getthoughts.png)
+![Social-Network-API](assets/images/get.png)
 
-![Social-Network-API](/assets/images/createthought.png)
+![Social-Network-API](assets/images/create.png)
 
 ## License
 Please see https://mpl-license.org/ to get info about this license
