@@ -25,6 +25,8 @@ Currently no contributions are being taken.
 
 ## Walkthrough Video
 
+https://user-images.githubusercontent.com/97558337/216705368-926518bb-983d-414c-b0b5-c8bc274c64b7.mp4
+
 
 
 ## Mock-Up
